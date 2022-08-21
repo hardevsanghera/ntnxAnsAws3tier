@@ -22,7 +22,7 @@ echo "Index Value is: $webserveri" > /tmp/cust.txt
 echo "Array Value is: ${colors[$webserveri]}" >> /tmp/cust.txt
 sed -i "s/\#005495\;/${colors[$webserveri]}/" "$phpdir/$phpfile"
 #Change web page title
-sed -i 's/Laravel Quickstart - Basic/Nutanix Self Service Demonstration/' "$phpdir/$phpfile"
+sed -i 's/Laravel Quickstart - Basic/Nutanix + Ansible Demonstration/' "$phpdir/$phpfile"
 sleep 1
 #Heading message and IP address of the targeted webserver
 sed -i "s/Task Manager v12.0<\/h2>/<h2 style=\"color: white;\">Task Manager Managed by Nutanix Self Service<\/h2><h2 style=\"color: white;\">[webserver IP: $myip]<\/h2>XXXXXX/" "$phpdir/$phpfile"
