@@ -4,14 +4,14 @@
 
 <h2>Application Architecture</h2>
 <p>This 3 tier application, a webapp, is deployed, using Ansible, with MySQL as the back-end database.  Two nginx servers make up the middle layer and the front-end loadbalancer is implemened using HAProxy.  The latter two layers are deployed onto AWS and the dtabase server is deployed onto a Nutanix AHV cluster.  The dtabase layer and the midle webserver layer communicate over an ssh tunnel - this means there's no need for an AWS site-site vpn and one the app has been deployed any user anywhere from any device with a browser can enter the public IP address of the loadbalancer and get to the Task Manager webapp.</p>
-<img src="images/arch-ansible-small.jpeg" 
+<center><img src="images/arch-ansible-small.jpeg" 
      width="500" 
-     height="auto" />
+     height="auto" /></center>
      
 <h2>Application UI</h2>
-<img src="images/taskappiphone-small2.jpeg" 
+<center><img src="images/taskappiphone-small2.jpeg" 
      width="200" 
-     height="auto" />
+     height="auto" /></center>
 
 <h2>Pre-requisites</h2>
 <p>I used an Ubuntu 20.04.1 workstation VM running under VirtualBox.</p>
@@ -32,7 +32,7 @@
      <li>edit ntnxansibleplay.yaml to reflect your PC and AWS VPC</li>
      <li>copy your ec2 key pair file (something.pem) to the repo folder where all the other files are</li>
      <li>$ ansible-playbook ntnxansibleplay.yaml</li>
-</ul>
+</ol>
 <h1>Timings</h1>
 On average complete deployment (not including the image upload) for the main ntnxawsplay.yaml (ie. the whole 3-tier application and componenets) takes about 20-30 minutes - sometimes longer.  This is because the VMs have to install packages and updates as well as perform the installtion and customization of the application.
 <h1>Issues and Observations</h1>
