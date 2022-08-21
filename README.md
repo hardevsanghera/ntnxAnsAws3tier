@@ -13,7 +13,7 @@
      width="200" 
      height="auto" />
 
-<h2>Pre-requesites</h2>
+<h2>Pre-requisites</h2>
 <p>I used an Ubuntu 20.04.1 workstation VM running under VirtualBox.</p>
 <ol>
      <li>Ansible core 2.13.2</li>
@@ -23,3 +23,23 @@
      <li>Nutanix AHV based cluster manged by Prism Central, with credentials</li>
      <li>CentOS 7 AHV disk image, from here: http://download.nutanix.com/Calm/CentOS-7-x86_64-1908.qcow2 - the getImageplay.yaml Ansible playbook will fetch the image for you - edit it first.
 </ol>
+<h1>How to install and get the webapp working</h1>
+<ol>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+</ul>
+<h1>Issues and Observations</h1>
+<ul>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+</ul>
