@@ -19,27 +19,24 @@
      <li>Ansible core 2.13.2</li>
      <li>Nutanix Ansible Module: https://github.com/nutanix/nutanix.ansible - great blog walk-thru: https://www.nutanix.dev/2022/08/05/getting-started-with-the-nutanix-ansible-module/</li>
      <li>AWS Account with valid API key and secret key, if you can run the aws cli then you rshould be good with the permissions you have</li>
-     <li>AWS VPC including subnet, key pair (pem file)</li>
+     <li>AWS VPC including subnet, key pair (pem file) and inbound security group rules - see the comments in the playbook.</li>
      <li>Nutanix AHV based cluster manged by Prism Central, with credentials</li>
      <li>CentOS 7 AHV disk image, from here: http://download.nutanix.com/Calm/CentOS-7-x86_64-1908.qcow2 - the getImageplay.yaml Ansible playbook will fetch the image for you - edit it first.
 </ol>
 <h1>How to install and get the webapp working</h1>
 <ol>
-     <li></li>
-     <li></li>
-     <li></li>
-     <li></li>
-     <li></li>
-     <li></li>
-     <li></li>
+     <li>verify pre-reqs above</li>
+     <li>git clone this repo</li>
+     <li>Optional: edit getImageplay.yaml to reflect your Prism Central(PC)</li>
+     <li>$ Optional: ansible-playbook getImageplay.yaml<li>Or you can use the PC UI to upload the image as CentOS7.qcow2 from the URI above.</li></li>
+     <li>edit ntnxansibleplay.yaml to reflect your PC and AWS VPC</li>
+     <li>copy your ec2 key pair file (something.pem) to the repo folder where all the other files are</li>
+     <li>$ ansible-playbook ntnxansibleplay.yaml</li>
 </ul>
 <h1>Issues and Observations</h1>
 <ul>
-     <li></li>
-     <li></li>
-     <li></li>
-     <li></li>
-     <li></li>
-     <li></li>
-     <li></li>
+     <li>The ssh tunnels between the webservers and the datbase server will drop after about 2 hours - beware if demoing, advise setup maybe 45 minutes bfore needed.</li>
+     <li>Timing:  There are "pause" tasks implemenetd in the playbook as sometimes the VMs have not quite customized.  These should be long enough but you may need to vary them sometimes.</li>
+     <li>"Unable to connect" message - on occasion the palybook task trying to connect to any of the VMs will error "could not connect" or similar message.  I advise simply deleteing ewverything created so far and re-running the playbook.</li>
+
 </ul>
