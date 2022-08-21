@@ -28,9 +28,9 @@
      <li>git clone this repo</li>
      <li>Optional: edit getImageplay.yaml to reflect your Prism Central(PC)</li>
      <li>Optional: $ ansible-playbook getImageplay.yaml - Or you can use the PC UI to upload the image as CentOS7.qcow2 from the URI above.</li>
-     <li>edit ntnxansibleplay.yaml to reflect your PC and AWS VPC</li>
+     <li>edit ntnxawsplay.yaml to reflect your PC and AWS VPC</li>
      <li>copy your ec2 key pair file (something.pem) to the repo folder where all the other files are</li>
-     <li>$ ansible-playbook ntnxansibleplay.yaml</li>
+     <li>$ ansible-playbook ntnxawsplay.yaml</li>
 </ol>
 <h1>Timings</h1>
 On average complete deployment (not including the image upload) for the main ntnxawsplay.yaml (ie. the whole 3-tier application and componenets) takes about 20-30 minutes - sometimes longer.  This is because the VMs have to install packages and updates as well as perform the installtion and customization of the application.
