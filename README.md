@@ -7,6 +7,6 @@ Ansible playbooks to deploy 3-tier Tasks Laravel web app with MySQL dbserver (on
      height="auto" />
      
 <h2>Application UI</h2>
-<img src="images/taskappiphone-small.jpeg" 
+<img src="images/taskappiphone-small2.jpeg" 
      width="200" 
      height="auto" />
