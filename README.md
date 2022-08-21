@@ -32,6 +32,7 @@
      <li>copy your ec2 key pair file (something.pem) to the repo folder where all the other files are</li>
      <li>$ ansible-playbook ntnxawsplay.yaml</li>
 </ol>
+<p>The last task to be run will print out the public IP addresses of the loadbalancer (HAProxy) and the two webservers.  Point your browser to the IP address of the loadbalancer and you will be routed through to the Task Manager webapp.</p>
 <h1>Timings</h1>
 On average complete deployment (not including the image upload) for the main ntnxawsplay.yaml (ie. the whole 3-tier application and componenets) takes about 20-30 minutes - sometimes longer.  This is because the VMs have to install packages and updates as well as perform the installtion and customization of the application.
 <h1>Issues and Observations</h1>
