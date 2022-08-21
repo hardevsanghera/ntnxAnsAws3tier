@@ -5,3 +5,7 @@ Application Architecture
 ![Application Architecture](images/arch-ansible-small.jpeg)
 Application UI
 ![Application UI](images/taskappiphone-small.jpeg)
+Re-sized Image
+<img src="images/taskappiphone-small.jpeg" 
+     width="400" 
+     height="500" />
