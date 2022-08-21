@@ -40,4 +40,5 @@ On average complete deployment (not including the image upload) for the main ntn
      <li>The ssh tunnels between the webservers and the datbase server will drop after about 2 hours - beware if demoing, advise setup maybe 45 minutes before needed.</li>
      <li>Timing:  There are "pause" tasks implemenetd in the playbook as sometimes the VMs have not quite customized or other reasons.  These should be long enough but you may need to vary them sometimes.</li>
      <li>"Unable to connect" message - on occasion the playbook task trying to connect to any of the VMs will error "could not connect" or similar message.  I advise simply to delete everything created so far and re-running the playbook.</li>
+     <li>SOmetimes I got "AWS was not able to validate the provided access credentials" when running a palybook - check the time on your workstation - if it's out by only a few minutes then AWS will not accept your credentials.  Set the current time on your workstation to fix.  </li>
 </ul>
