@@ -27,7 +27,7 @@
      <li>verify pre-reqs above</li>
      <li>git clone this repo</li>
      <li>Optional: edit getImageplay.yaml to reflect your Prism Central(PC)</li>
-     <li>$ Optional: ansible-playbook getImageplay.yaml - Or you can use the PC UI to upload the image as CentOS7.qcow2 from the URI above.</li>
+     <li>Optional: $ ansible-playbook getImageplay.yaml - Or you can use the PC UI to upload the image as CentOS7.qcow2 from the URI above.</li>
      <li>edit ntnxansibleplay.yaml to reflect your PC and AWS VPC</li>
      <li>copy your ec2 key pair file (something.pem) to the repo folder where all the other files are</li>
      <li>$ ansible-playbook ntnxansibleplay.yaml</li>
