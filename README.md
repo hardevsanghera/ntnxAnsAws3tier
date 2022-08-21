@@ -8,4 +8,4 @@ Application UI
 Re-sized Image
 <img src="images/taskappiphone-small.jpeg" 
      width="400" 
-     height="500" />
+     height="auto" />
