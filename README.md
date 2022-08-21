@@ -28,15 +28,14 @@
      <li>verify pre-reqs above</li>
      <li>git clone this repo</li>
      <li>Optional: edit getImageplay.yaml to reflect your Prism Central(PC)</li>
-     <li>$ Optional: ansible-playbook getImageplay.yaml<li>Or you can use the PC UI to upload the image as CentOS7.qcow2 from the URI above.</li></li>
+     <li>$ Optional: ansible-playbook getImageplay.yaml - Or you can use the PC UI to upload the image as CentOS7.qcow2 from the URI above.</li>
      <li>edit ntnxansibleplay.yaml to reflect your PC and AWS VPC</li>
      <li>copy your ec2 key pair file (something.pem) to the repo folder where all the other files are</li>
      <li>$ ansible-playbook ntnxansibleplay.yaml</li>
 </ul>
 <h1>Issues and Observations</h1>
 <ul>
-     <li>The ssh tunnels between the webservers and the datbase server will drop after about 2 hours - beware if demoing, advise setup maybe 45 minutes bfore needed.</li>
-     <li>Timing:  There are "pause" tasks implemenetd in the playbook as sometimes the VMs have not quite customized.  These should be long enough but you may need to vary them sometimes.</li>
-     <li>"Unable to connect" message - on occasion the palybook task trying to connect to any of the VMs will error "could not connect" or similar message.  I advise simply deleteing ewverything created so far and re-running the playbook.</li>
-
+     <li>The ssh tunnels between the webservers and the datbase server will drop after about 2 hours - beware if demoing, advise setup maybe 45 minutes before needed.</li>
+     <li>Timing:  There are "pause" tasks implemenetd in the playbook as sometimes the VMs have not quite customized or other reasons.  These should be long enough but you may need to vary them sometimes.</li>
+     <li>"Unable to connect" message - on occasion the playbook task trying to connect to any of the VMs will error "could not connect" or similar message.  I advise simply deleteing everything created so far and re-running the playbook.</li>
 </ul>
