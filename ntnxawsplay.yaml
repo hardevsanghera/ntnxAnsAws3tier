@@ -204,7 +204,7 @@
         region: "{{ aws_region }}"
         resource: "{{ result.instances[0].instance_id }}"
         tags:
-          name: "webservervm1of2"
+          Name: "webservervm1of2"
         state: present
 
     - name: (17 of 24) name the webserver [2 of 2] 
@@ -212,7 +212,7 @@
         region: "{{ aws_region }}"
         resource: "{{ result.instances[1].instance_id }}"
         tags:
-          name: "webservervm2of2"
+          Name: "webservervm2of2"
         state: present
 
     - name: (18 of 24) name the loadbalancer 
@@ -220,7 +220,7 @@
         region: "{{ aws_region }}"
         resource: "{{ result.instances[2].instance_id }}"
         tags:
-          name: "HAProxyvm"
+          Name: "HAProxyvm"
         state: present
 
     - name: (19 of 24) Dynamically add newly created VMs to the inventory
