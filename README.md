@@ -33,9 +33,11 @@
      <li>copy your ec2 key pair file (something.pem) to the repo folder where all the other files are</li>
      <li>$ ansible-playbook ntnxansibleplay.yaml</li>
 </ul>
+<h1>Timings</h1>
+On average complete deployment (not including the image upload) for the main ntnxawsplay.yaml (ie. the whole 3-tier application and componenets) takes about 20-30 minutes - sometimes longer.  This is because the VMs have to install packages and updates as well as perform the installtion and customization of the application.
 <h1>Issues and Observations</h1>
 <ul>
      <li>The ssh tunnels between the webservers and the datbase server will drop after about 2 hours - beware if demoing, advise setup maybe 45 minutes before needed.</li>
      <li>Timing:  There are "pause" tasks implemenetd in the playbook as sometimes the VMs have not quite customized or other reasons.  These should be long enough but you may need to vary them sometimes.</li>
-     <li>"Unable to connect" message - on occasion the playbook task trying to connect to any of the VMs will error "could not connect" or similar message.  I advise simply deleteing everything created so far and re-running the playbook.</li>
+     <li>"Unable to connect" message - on occasion the playbook task trying to connect to any of the VMs will error "could not connect" or similar message.  I advise simply to delete everything created so far and re-running the playbook.</li>
 </ul>
