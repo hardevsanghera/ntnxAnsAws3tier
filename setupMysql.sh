@@ -17,8 +17,8 @@ sudo ntpdate -u -s 0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org
 sudo systemctl enable ntpd
 sudo systemctl restart ntpd
 #Setup sshd to allow password logins / root
-sudo sed -i 's/\#PermitRootLogin yes/PermitRootLogin yes/g' /etc/ssh/sshd_config
-sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+#sudo sed -i 's/\#PermitRootLogin yes/PermitRootLogin yes/g' /etc/ssh/sshd_config
+#sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 sudo systemctl restart sshd
 sudo bash -c 'echo "Defaults umask_override" >> /etc/sudoers'
 sudo bash -c 'echo "Defaults umask=0002" >> /etc/sudoers'
