@@ -31,9 +31,9 @@ sudo /bin/systemctl start mysqld
 sudo /bin/systemctl enable mysqld
 
 #Mysql create datbase for the app and also access for db root / homestead users
+#CREATE USER 'root'@'%' IDENTIFIED BY '$1'; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 mysql -u root <<-EOF
 UPDATE mysql.user SET Password=PASSWORD('$1') WHERE User='homestead';
-CREATE USER 'root'@'%' IDENTIFIED BY '$1'; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '$1';
 CREATE DATABASE homestead;
 GRANT ALL PRIVILEGES ON homestead.* TO 'homestead'@'localhost' identified by '$1';
