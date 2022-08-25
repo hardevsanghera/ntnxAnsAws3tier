@@ -36,8 +36,8 @@ UPDATE mysql.user SET Password=PASSWORD('$1') WHERE User='homestead';
 CREATE USER 'root'@'%' IDENTIFIED BY '$1'; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '$1';
 CREATE DATABASE homestead;
-GRANT ALL PRIVILEGES ON homestead.* TO 'homestead'@'%' identified by '$1';
 GRANT ALL PRIVILEGES ON homestead.* TO 'homestead'@'localhost' identified by '$1';
 GRANT ALL PRIVILEGES ON homestead.* TO 'homestead'@'127.0.0.1' identified by '$1';
+GRANT ALL PRIVILEGES ON homestead.* TO 'homestead'@'%' identified by '$1';
 FLUSH PRIVILEGES;
 EOF
