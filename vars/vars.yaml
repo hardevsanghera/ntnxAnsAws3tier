@@ -3,7 +3,7 @@
 #which is standard as my ansible controler runs on the same ubuntu 20.04.1 VM.
 #I do not use ansible vault or best practices around passwords.
 #hardev@nutanix.com Aug'22
-nutanix_host: "10.42.74.39"                #EDIT for your environment - Prism Central IP
+nutanix_host: "10.10.10.10"                #EDIT for your environment - Prism Central IP
 nutanix_username: "admin"                  #EDIT for your environment - Prism Central userid
 nutanix_password: "nokiA1922."             #EDIT for your environment - Prism Central password
 aws_key_file: "myawskey"                   #EDIT for your environment #ec2 login: the pem key to ssh to your ec2 instances 
@@ -25,6 +25,5 @@ centos_vm_user: "centos"                   #ntnx: sudo enabled userid for the da
 centos_vm_pw: "Nutanix/4u"                 #ntnx: password for the centos user on the dtabase server
 centos_key_file: "dbserverkey"             #ntnx: Private key file for dbserver ssh access
 dbserverPUB_key_file: "dbserverkey.pub"    #ntnx: ssh public key for centos user access
-dbserver_ssh_key_file: "dbserverkey"       #ntnx: Private key file for dbserver ssh access
 
 #WARNING: dbserverkey and dbserverkey.pub rsa keys will be "force" overwritten in the playbook directory
