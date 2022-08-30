@@ -15,7 +15,7 @@
 #
 #You will need an image called "CentOS7.qcow2"  in Prism Central (yes, with the suffix) which you can get at:
 #http://download.nutanix.com/Calm/CentOS-7-x86_64-1908.qcow2
-#Pull the image into your Pris Central via the UI or use getimageplay.yaml,
+#Pull the image into your Prism Central via the UI or use getimageplay.yaml,
 #it will pull the image into your Prism Central - edit that play before using it.
 #
 #Your ec2 Security Group needs to have the following Inbound Rules defined:
