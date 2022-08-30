@@ -1,11 +1,12 @@
 ---
 #playbook to fetch CentOS7 image (for Nutanix AHV) to use with the 3-tier Task application
+#hardev@nutanix.com Aug'22
 - hosts: localhost
   gather_facts: false 
   vars:
-    pc: "10.10.10.10"                         #EDIT for your environment
-    pc_user: "admin"                          #EDIT for your environment
-    pc_password: "password"                   #EDIT for your environment
+    pc: "{{ nutanix_host }}"                  #EDIT for your environment - see vars/vars.yaml
+    pc_user: "{{ nutanix_username }}"         #EDIT for your environment
+    pc_password: "{{ nutanix_password }}"     #EDIT for your environment
     new_image_name: "CentOS7.qcow2"
     image_description: "CentOS 7 image for 3-tier (on prem NTNX + AWS) Task app"
     image_source_uri: "http://download.nutanix.com/Calm/CentOS-7-x86_64-1908.qcow2"
