@@ -59,7 +59,7 @@
     
     - name: (2 of 24) generate SSH key for accessing the database server as user centos
       openssh_keypair:
-        path: "./{{dbserver_ssh_key_file}}"
+        path: "./{{ centos_key_file }}"
         type: rsa
         size: 4096
         state: present
