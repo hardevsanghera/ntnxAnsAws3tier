@@ -123,7 +123,7 @@
         disks:
           - type: "DISK"
             size_gb: 50
-            bus: "SATA"
+            bus: "SCSI"
             clone_image:
               name: "{{ image_name }}"
         vcpus: 4
