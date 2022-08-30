@@ -103,8 +103,8 @@
         src: cloud-init.j2
         dest: cloud-init.sh
 
-    - pause:
-        seconds: 60
+#    - pause:
+#        seconds: 60
 
     - name: (6 of 24) Create database tier MySQL VM
       ntnx_vms:
@@ -150,8 +150,8 @@
         ansible_ssh_user: "{{ centos_vm_user }}"
         ansible_ssh_private_key_file: "{{ centos_key_file }}"
 
-    - pause: #Work around for timing issues.
-        seconds: 60
+#    - pause: #Work around for timing issues.
+#        seconds: 60
 
     - name: (10 of 24) Change password for user centos on dbserver
       ansible.builtin.user:
@@ -181,11 +181,13 @@
           Tier: allthree
         state: running
         user_data: "{{ lookup('file', cinit_script_path) }}" 
+        wait: yes
+        wait_timeout: 90
 
       register: result
 
-    - pause: #Work around for timing issues.
-        seconds: 60
+#    - pause: #Work around for timing issues.
+#        seconds: 60
 
     - name: (13 of 24) set variable webserver as vm's public ip
       set_fact:
@@ -235,8 +237,8 @@
       - "{{ webservervmip }}"
       - "{{ webservervmip2 }}"
 
-    - pause: #Work around for timing issues.
-        seconds: 60
+#    - pause: #Work around for timing issues.
+#        seconds: 60
 
     - name: (20 of 24) Install/Setup HAProxy
       ansible.builtin.script: "./setupHAProxy.sh {{ webservervmip + ',' + webservervmip2 }}" 
