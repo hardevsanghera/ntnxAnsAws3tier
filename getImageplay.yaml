@@ -4,7 +4,7 @@
 - hosts: localhost
   gather_facts: false 
   vars_files:
-    - vars/vars/yaml  
+    - vars/vars.yaml  
   vars:
     pc: "{{ nutanix_host }}"                  #EDIT for your environment - see vars/vars.yaml
     pc_user: "{{ nutanix_username }}"         #EDIT for your environment
