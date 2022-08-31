@@ -30,7 +30,7 @@
      <li>edit vars/vars.yaml to reflect your PC and AWS VPC - just the variables marked EDIT</li>
      <li>Optional: edit getImageplay.yaml to reflect your Prism Central(PC)</li>
      <li>Optional: $ ansible-playbook getImageplay.yaml - Or you can use the PC UI to upload the image as CentOS7.qcow2 from the URI above.</li>
-     <li>Althouh previous steps are optional you HAVE to have a valid Windows 2019 AHV Disk image!</li>
+     <li>Althouh previous steps are optional you HAVE to have a valid CentOS 7 AHV Disk image!</li>
      <li>copy your ec2 key pair file (something.pem) to the repo folder where all the other files are</li>
      <li>$ ansible-playbook ntnxawsplay.yaml</li>
 </ol>
